@@ -19,7 +19,7 @@ int (*get_specifier(char *s))(va_list ap, params_t *params)
 		{"o", print_octal},
 		{"x", print_hex},
 		{"X", print_HEX},
-		{"p", print_address},
+		{"p", print_adress},
 		{"S", print_S},
 		{"r", print_rev},
 		{"R", print_rot13},
