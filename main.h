@@ -53,7 +53,7 @@ typedef struct specifier
 	int (*f)(va_list, params_t *);
 } specifier_t;
 
-int _puts(char *str);
+int _puts(char *s);
 int _putchar(int c);
 
 int print_int(va_list ap, params_t *params);
