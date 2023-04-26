@@ -3,6 +3,7 @@
 /**
  * convert - a function to convert
  * @num: number
+ * @base: base
  * @flags: flags arguments
  * @params:  parameters
  *
