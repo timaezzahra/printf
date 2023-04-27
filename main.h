@@ -71,7 +71,7 @@ int get_modifier(char *s, params_t *params);
 char *get_width(char *s, params_t *params, va_list ap);
 
 /*nums.c*/
-char *convert(long int num, int base, int flags; params_t *params);
+char *convert(long int num, int base, int flags, params_t *params);
 int print_unsigned(va_list arptr,params_t *params);
 int print_adress(va_list arptr, params_t *params);
 
@@ -87,7 +87,7 @@ int print_rev(va_list ap, params_t *params);
 int print_rot13(va_list ap, params_t *params);
 
 /* print_nums.c*/
-int _isdigit(int char);
+int _isdigit(int ch);
 int _strlen(char *s);
 int _print_number(char *str, params_t *params);
 int _print_number_right_shift(char *str, params_t *params);

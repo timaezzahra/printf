@@ -39,7 +39,7 @@ int _print_int(va_list arptr, params_t *params)
 		l = (short int)va_arg(arptr, int);
 	else
 		l = (int)va_arg(arptr, int);
-	return (print_number(int convert(l, 10, 0, params), params));
+	return (_print_number(convert(l, 10, 0, params), params));
 }
 
 /**
@@ -117,14 +117,14 @@ int _print_S(va_list arptr, params_t *params)
 		return (_puts(NULL_STRING));
 	for (; *str; str++)
 	{
-		if ((*str > 0 && *str < 32 || *str >= 127))
+		if ((*str > 0 && *str < 32) || *str >= 127)
 				{
 				sm += _putchar('\\');
 				sm += _putchar('x');
 				hexa = convert(*str, 16, 0, params);
 				if (!hexa[1])
 				sm += _putchar('0');
-				sm += _puts('hexa');
+				sm += _puts(hexa);
 				}
 				else
 				{

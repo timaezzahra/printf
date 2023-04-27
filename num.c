@@ -56,7 +56,7 @@ int print_unsigned(va_list arptr, params_t *params)
 	else
 		l = (unsigned int)va_arg(arptr, unsigned int);
 	params->unsigne = l;
-	return (print_number(convert(l, 10, CONVERT_UNSIGNED, params), params));
+	return (_print_number(convert(l, 10, CONVERT_UNSIGNED, params), params));
 }
 /**
  * print_adress - print the adress
@@ -77,5 +77,5 @@ int print_adress(va_list arptr, params_t *params)
 	str = convert(n, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, params);
 	*--str = 'x';
 	*--str = '0';
-	return (print_number(str, params));
+	return (_print_number(str, params));
 }

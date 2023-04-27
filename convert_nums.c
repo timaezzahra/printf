@@ -27,7 +27,7 @@ int print_hexa(va_list arptr, params_t *params)
 		*--str = '0';
 	}
 	params->unsigne = 1;
-	return (c += print_number(str, params));
+	return (c += _print_number(str, params));
 }
 
 /**
@@ -56,7 +56,7 @@ int print_HEXA(va_list arptr, params_t *params)
 		*--str = '0';
 	}
 	params->unsigne = 1;
-	return (c += print_number(str, params));
+	return (c += _print_number(str, params));
 }
 
 /**
@@ -75,7 +75,7 @@ int print_binary(va_list arptr, params_t *params)
 	if (params->hashtag_flag && n)
 		*--str = '0';
 	params->unsigne = 1;
-	return (c += print_number(str, params));
+	return (c += _print_number(str, params));
 			}
 /**
  * print_octal - print unsigned octal num
@@ -101,5 +101,5 @@ int print_octal(va_list arptr, params_t *params)
 	if  (params->hashtag_flag && l)
 		*--str = '0';
 	params->unsigne = 1;
-	return (c += print_number(str, params));
+	return (c += _print_number(str, params));
 			}
