@@ -64,7 +64,7 @@ int print_percent(va_list arptr, params_t *params);
 int print_S(va_list arptr, params_t *params);
 
 
-int (*get_specifier(char *s))(va_list ap, params_t *params);
+int (*get_specifier(char *s))(va_list ap, params_t *params)
 int get_print_func(char *s, va_list ap, params_t *params);
 int get_flag(char *s, params_t *params);
 int get_modifier(char *s, params_t *params);
@@ -96,6 +96,6 @@ int _print_number_left_shift(char *str, params_t *params);
 
 char *get_precision(char *p, params_t *params, va_list ap);
 void init_params(params_t *params, va_list ap);
-int _print(const char *format, ...);
+int _printf(const char *format, ...);
 
 #endif
