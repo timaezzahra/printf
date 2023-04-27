@@ -11,6 +11,7 @@ int _isdigit(int char)
 {
 	return (char >= '0' && chat <= '9');
 }
+
 /**
  * _strlen - the lenght of a string
  * @s : the string to check his length
@@ -119,10 +120,10 @@ int _print_number_left_shift(char *str, params_t *params)
 
 			if ((params->plus_flag && !nega2 && !params->unsign)
 				n += _putchar('+'), i++;
-				else if (params->space_flag && !nega2 && !params->unsign)
+			else if (params->space_flag && !nega2 && !params->unsign)
 				n += _putchar(' '), i++;
 				n += _putchar(str);
 				while (i++ < params->width)
 				n += _putchar(char_p);
 				return (n);
-				}
+}
